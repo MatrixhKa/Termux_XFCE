@@ -3,10 +3,8 @@
 #Download Wallpaper
 wget https://raw.githubusercontent.com/phoenixbyrd/Termux_XFCE/main/peakpx.jpg
 wget https://raw.githubusercontent.com/phoenixbyrd/Termux_XFCE/main/dark_waves.png
-wget https://raw.githubusercontent.com/MatrixhKa/Termux_XFCE/main/xfce4-desktop.xml
 mv peakpx.jpg $HOME/../usr/share/backgrounds/xfce/
 mv dark_waves.png $HOME/../usr/share/backgrounds/xfce/
-mv xfce4-desktop.xml $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/
 
 #Install WhiteSur-Dark Theme
 wget https://github.com/vinceliuice/WhiteSur-gtk-theme/archive/refs/tags/2023-04-26.zip
@@ -42,16 +40,6 @@ rm readme.md
 wget https://github.com/phoenixbyrd/Termux_XFCE/raw/main/NotoColorEmoji-Regular.ttf
 mv NotoColorEmoji-Regular.ttf .fonts
 
-wget https://github.com/phoenixbyrd/Termux_XFCE/raw/main/font.ttf
-mv font.ttf .termux/font.ttf
-
-#Setup Fancybash Termux
-wget https://raw.githubusercontent.com/phoenixbyrd/Termux_XFCE/main/fancybash.sh
-mv fancybash.sh .fancybash.sh
-echo "source $HOME/.fancybash.sh" >> $PREFIX/etc/bash.bashrc
-sed -i "326s/\\\u/$username/" $HOME/.fancybash.sh
-sed -i "327s/\\\h/termux/" $HOME/.fancybash.sh
-
 #Autostart 
 #Create autostart directory
 if [ ! -d "$HOME/.config/autostart" ]; then
@@ -71,11 +59,6 @@ chmod +x $HOME/.config/autostart/*.desktop
 
 
 #Proot Theming
-#Setup Fancybash Proot
-cp .fancybash.sh $PREFIX/var/lib/proot-distro/installed-rootfs/debian/home/$username
-echo "source ~/.fancybash.sh" >> $PREFIX/var/lib/proot-distro/installed-rootfs/debian/home/$username/.bashrc
-sed -i '327s/termux/proot/' $PREFIX/var/lib/proot-distro/installed-rootfs/debian/home/$username/.fancybash.sh
-
 wget https://github.com/phoenixbyrd/Termux_XFCE/raw/main/conky.tar.gz
 tar -xvzf conky.tar.gz
 rm conky.tar.gz

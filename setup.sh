@@ -101,8 +101,8 @@ alias uninstall='nala remove $@ '
 " >> $HOME/.bashrc
 
 #Put Firefox icon on Desktop
-cp $HOME/../usr/share/applications/firefox.desktop $HOME/Desktop 
-chmod +x $HOME/Desktop/firefox.desktop
+cp $HOME/../usr/share/applications/chromium.desktop $HOME/Desktop 
+chmod +x $HOME/Desktop/chromium.desktop
 
 cat <<'EOF' > ../usr/bin/prun
 #!/bin/bash
@@ -332,21 +332,6 @@ rm readme.md
 wget https://github.com/phoenixbyrd/Termux_XFCE/raw/main/NotoColorEmoji-Regular.ttf
 mv NotoColorEmoji-Regular.ttf .fonts
 cp .fonts/NotoColorEmoji-Regular.ttf $HOME/../usr/var/lib/proot-distro/installed-rootfs/debian/home/$username/.fonts/ 
-
-#Setup Fancybash Termux
-wget https://raw.githubusercontent.com/phoenixbyrd/Termux_XFCE/main/fancybash.sh
-mv fancybash.sh .fancybash.sh
-echo "source $HOME/.fancybash.sh" >> $HOME/.bashrc
-sed -i "326s/\\\u/$username/" $HOME/.fancybash.sh
-sed -i "327s/\\\h/termux/" $HOME/.fancybash.sh
-
-#Setup Fancybash Proot
-cp .fancybash.sh $HOME/../usr/var/lib/proot-distro/installed-rootfs/debian/home/$username
-echo "source ~/.fancybash.sh" >> $HOME/../usr/var/lib/proot-distro/installed-rootfs/debian/home/$username/.bashrc
-sed -i '327s/termux/proot/' $HOME/../usr/var/lib/proot-distro/installed-rootfs/debian/home/$username/.fancybash.sh
-
-wget https://github.com/phoenixbyrd/Termux_XFCE/raw/main/font.ttf
-mv font.ttf .termux/font.ttf
 }
 
 setup_xfce_settings() {

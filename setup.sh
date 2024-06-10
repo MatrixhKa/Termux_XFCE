@@ -74,7 +74,7 @@ proot-distro login debian --shared-tmp -- env DISPLAY=:1.0 cp /usr/share/zoneinf
 
 setup_xfce() {
 #Install xfce4 desktop and additional packages
-pkg install git neofetch virglrenderer-android papirus-icon-theme xfce4 xfce4-goodies eza pavucontrol-qt bat jq nala wmctrl firefox netcat-openbsd termux-x11-nightly eza -y
+pkg install git neofetch virglrenderer-android papirus-icon-theme xfce4 xfce4-goodies eza pavucontrol-qt bat jq nala wmctrl chromium netcat-openbsd termux-x11-nightly eza -y
 
 #Create .bashrc
 cp $HOME/../usr/var/lib/proot-distro/installed-rootfs/debian/etc/skel/.bashrc $HOME/.bashrc
@@ -100,7 +100,7 @@ alias install='nala install $@'
 alias uninstall='nala remove $@ '
 " >> $HOME/.bashrc
 
-#Put Firefox icon on Desktop
+#Put chromium icon on Desktop
 cp $HOME/../usr/share/applications/chromium.desktop $HOME/Desktop 
 chmod +x $HOME/Desktop/chromium.desktop
 

@@ -8,8 +8,8 @@ pkgs=('git' 'neofetch' 'virglrenderer-android' 'papirus-icon-theme' 'xfce4' 'xfc
 pkg install "${pkgs[@]}" -y -o Dpkg::Options::="--force-confold"
 
 #Put chromium icon on Desktop
-cp $PREFIX/share/applications/firefox.desktop $HOME/Desktop 
-chmod +x $HOME/Desktop/firefox.desktop
+cp $PREFIX/share/applications/chromium.desktop $HOME/Desktop 
+chmod +x $HOME/Desktop/chromium.desktop
 
 #Set aliases
 echo "

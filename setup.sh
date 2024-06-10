@@ -289,10 +289,8 @@ setup_theme() {
 #Download Wallpaper
 wget https://raw.githubusercontent.com/phoenixbyrd/Termux_XFCE/main/peakpx.jpg
 wget https://raw.githubusercontent.com/phoenixbyrd/Termux_XFCE/main/dark_waves.png
-wget https://raw.githubusercontent.com/MatrixhKa/Termux_XFCE/main/xfce4-desktop.xml
 mv peakpx.jpg $HOME/../usr/share/backgrounds/xfce/
 mv dark_waves.png $HOME/../usr/share/backgrounds/xfce/
-mv xfce4-desktop.xml $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/
 
 #Install WhiteSur-Dark Theme
 wget https://github.com/vinceliuice/WhiteSur-gtk-theme/archive/refs/tags/2023-04-26.zip

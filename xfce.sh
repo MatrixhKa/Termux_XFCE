@@ -2,14 +2,10 @@
 
 username="$1"
 
-pkgs=('git' 'neofetch' 'virglrenderer-android' 'papirus-icon-theme' 'xfce4' 'xfce4-goodies' 'eza' 'pavucontrol-qt' 'bat' 'jq' 'nala' 'wmctrl' 'chromium' 'netcat-openbsd' 'termux-x11-nightly' 'eza')
+pkgs=('git' 'neofetch' 'virglrenderer-android' 'papirus-icon-theme' 'xfce4' 'xfce4-goodies' 'eza' 'pavucontrol-qt' 'bat' 'jq' 'nala' 'wmctrl' 'netcat-openbsd' 'termux-x11-nightly' 'eza')
 
 #Install xfce4 desktop and additional packages
 pkg install "${pkgs[@]}" -y -o Dpkg::Options::="--force-confold"
-
-#Put chromium icon on Desktop
-cp $PREFIX/share/applications/chromium.desktop $HOME/Desktop 
-chmod +x $HOME/Desktop/chromium.desktop
 
 #Set aliases
 echo "

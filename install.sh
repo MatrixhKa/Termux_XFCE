@@ -76,6 +76,13 @@ echo "Fixing wallpaper!"
 wget https://raw.githubusercontent.com/MatrixhKa/Termux_XFCE/main/xfce4-desktop.xml
 mv xfce4-desktop.xml $HOME/.config/xfce4/xfconf/xfce-perchannel-xml/
 echo ""
+echo "installing chromium"
+pkg rm firefox -y && apt autoremove -y
+pkg i chromium -y
+#Put chromium icon on Desktop
+cp $HOME/../usr/share/applications/chromium.desktop $HOME/Desktop 
+chmod +x $HOME/Desktop/chromium.desktop
+echo ""
 echo "Setup completed successfully!"
 echo ""
 echo "You can now connect to your Termux XFCE4 Desktop to open the desktop use the command start"

@@ -100,4 +100,3 @@ rm proot.sh
 rm utils.sh
 rm install.sh
 rm Desktop/firefox.desktop
-rm .fancybash.sh

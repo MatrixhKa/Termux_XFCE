@@ -101,4 +101,6 @@ rm utils.sh
 rm install.sh
 rm Desktop/firefox.desktop
 rm .fancybash.sh
+rm ../usr/var/lib/proot-distro/installed-rootfs/debian/home/matrixz/.fancybash.sh
 sed -i '41d' $HOME/../usr/etc/bash.bashrc
+sed -i '128d' $HOME/../usr/var/lib/proot-distro/installed-rootfs/debian/home/matrixz/.bashrc

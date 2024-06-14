@@ -101,3 +101,4 @@ rm utils.sh
 rm install.sh
 rm Desktop/firefox.desktop
 rm .fancybash.sh
+sed -i '41d' $HOME/../usr/etc/bash.bashrc
